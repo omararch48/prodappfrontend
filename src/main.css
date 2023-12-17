@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-white bg-[#292828] max-w-[1400px] mx-auto;
+}

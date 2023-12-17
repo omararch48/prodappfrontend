@@ -1,0 +1,35 @@
+.todo-footer-controls {
+    @apply md:w-[620px] w-full flex flex-col mt-8;
+
+    .todo-footer-message {
+        @apply text-center text-white text-2xl mb-4;
+    }
+
+    & input[type="text"] {
+        @apply p-2 rounded-md text-blue-950 w-full;
+    }
+
+    & fieldset {
+        @apply flex justify-between my-2;
+
+        & input[type="checkbox"] {
+            @apply rounded-md;
+        }
+    }
+
+    & button.add-task-button {
+        @apply bg-emerald-600 hover:bg-emerald-700;
+    }
+
+    & button.save-tasks-button {
+        @apply bg-blue-600 hover:bg-blue-700;
+    }
+
+    & button.undo-tasks-button {
+        @apply bg-red-600 hover:bg-red-700;
+    }
+
+    & button {
+        @apply p-2 rounded-md transition-colors duration-300 ease-in-out relative bg-sky-600 my-2 flex justify-center items-center gap-4;
+    }
+}

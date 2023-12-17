@@ -1,0 +1,158 @@
+.todo-component {
+    @apply
+        /* View */
+        bg-sky-950
+        /* Display */
+        flex flex-col items-center justify-center
+        /* Size */
+        md:w-[620px] w-full
+    ;
+
+    .todo-name:hover {
+        .icon-title {
+            @apply flex;
+        }
+    }
+
+    .todo-name {
+        @apply
+            /* View */
+            font-semibold text-3xl
+            /* Display */
+            mx-2 my-6 px-4
+            /* Position */
+            relative
+            /* Size */
+            w-3/4
+        ;
+
+        & h2 {
+            @apply p-2 text-center;
+            user-select: none;
+        }
+
+        & input {
+            @apply p-2 rounded-md text-blue-950 w-full;
+        }
+
+        .icon-title {
+            @apply
+                /* View */
+                cursor-pointer text-sm
+                /* Position */
+                absolute left-full top-0
+                /* Display */
+                flex-col hidden pl-2
+            ;
+            user-select: none;
+        }
+    }
+
+    .todo-header {
+        @apply
+            /* View */
+            bg-white hover:shadow-md hover:shadow-white/40 rounded-lg text-blue-950
+            /* Size */
+            w-11/12
+            /* Display */
+            flex justify-evenly px-4 py-6
+            /* Transition */
+            duration-300 ease-in-out transition-all
+        ;
+
+        .info.complete.active {
+            @apply bg-emerald-600 hover:bg-emerald-700 text-white hover:text-white;
+        }
+
+        .info.incomplete.active {
+            @apply bg-rose-600 hover:bg-rose-700 text-white hover:text-white;
+        }
+
+        .info.complete {
+            @apply hover:text-emerald-600 p-6 transition-all ease-in-out duration-300;
+            border-radius: 50%;
+        }
+
+        .info.incomplete {
+            @apply hover:text-rose-600 p-6 transition-all ease-in-out duration-300;
+            border-radius: 50%;
+        }
+
+        .info {
+            @apply
+                /* View */
+                cursor-pointer
+                /* Display */
+                flex flex-col gap-2 items-center justify-center
+                /* Transition */
+                duration-300 ease-in-out transition-colors
+            ;
+
+            .number {
+                @apply text-6xl;
+            }
+
+            .text {
+                @apply text-center;
+            }
+        }
+    }
+
+    .todo-controls {
+        @apply
+            bg-blue-700
+            duration-300
+            ease-in-out
+            flex-col
+            flex-wrap
+            hover:shadow-md
+            hover:shadow-white/40
+            inline-flex
+            items-center
+            justify-center
+            mb-8
+            mt-[-12px]
+            overflow-hidden
+            rounded-md
+            sm:flex-row
+            transition-all
+            w-10/12
+        ;
+
+
+        & button.add {
+            @apply hover:bg-teal-600;
+        }
+
+        & button.info {
+            @apply hover:bg-yellow-600;
+        }
+
+        & button.remove {
+            @apply hover:bg-rose-600;
+        }
+
+        & button.edit {
+            @apply hover:bg-fuchsia-600;
+        }
+
+        & button {
+            @apply
+                duration-300
+                ease-in-out
+                flex
+                items-center
+                justify-between
+                px-4
+                py-8
+                sm:w-1/3
+                transition-all
+                w-full
+            ;
+        }
+    }
+
+    .todo-list {
+        @apply divide-y w-full;
+    }
+}
